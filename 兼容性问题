@@ -1,0 +1,13 @@
+区别IE6、7与FF/IE8：
+background:blue;*background:orange;
+原理：FF/IE8不支持*开头，而IE6/7都支持。
+
+区别IE6与IE7/IE8/FF：
+background:green;_background:blue;
+原理：IE6支持下划线”_”，IE7、8和firefox均不支持下划线。
+
+区别FF/IE8和IE6/7：
+background:orange;+background:green;-background:blue;
+background:orange;*background:green!important;*background:blue;
+原理：IE6能识别-，IE7能识别+，IE8和FF都不能识别+和-
+IE8/FF都不识别*，IE7优先识别!important，IE6不能识别!important。
